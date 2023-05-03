@@ -13,7 +13,7 @@ class YoutubeDownloaderApp(QDialog):
         super(YoutubeDownloaderApp, self).__init__(parent)
 
         self.url_line = QLineEdit()
-        self.url_line.setPlaceholderText("https://youtu.be/test")
+        self.url_line.setPlaceholderText("https://youtu.be/test") # Youtube video share link
 
         start_button = QPushButton("Start")
         start_button.clicked.connect(self.clicked_start_button)
