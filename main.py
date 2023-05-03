@@ -21,7 +21,7 @@ class YoutubeDownloaderApp(QDialog):
         self.dictionary_label = QLabel(str(os.getcwd()))
         self.dictionary_label.setWordWrap(True)
 
-        self.dictionary_button = QPushButton("Select Dictionary")
+        self.dictionary_button = QPushButton("Select Folder")
         self.dictionary_button.clicked.connect(self.clicked_dictionary_button)
 
         self.video_check = QCheckBox("Video")
@@ -53,7 +53,7 @@ class YoutubeDownloaderApp(QDialog):
                     ytp.convert_mp3(not (self.video_check.isChecked()))
         except:
             QMessageBox.warning(
-                self, "Error", "error occurred during operation.Please , try it")
+                self, "Error", "Error occurred during operation. Please , try again it")
 
     def clicked_dictionary_button(self):
         selected_dictionary = QFileDialog.getExistingDirectory(
