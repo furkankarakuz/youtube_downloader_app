@@ -51,7 +51,9 @@ class YoutubeDownloaderApp(QDialog):
                 ytp.download_video()
                 if self.mp3_check.isChecked():
                     ytp.convert_mp3(not (self.video_check.isChecked()))
-        except:
+            QMessageBox.information(
+                self, "Success", "Download Successful")
+        except Exception as e:
             QMessageBox.warning(
                 self, "Error", "Error occurred during operation. Please , try again it")
 
